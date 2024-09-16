@@ -1,0 +1,234 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e9ecef; /* Light gray background */
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  /* Dark gray background */
+    color: #f8f9fa; /* Light text color */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo h1 {
+    font-size: 24px;
+    color: #00bcd4; /* Teal color */
+}
+
+.auth-buttons button {
+    margin-left: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-btn {
+    background-color: transparent;
+    color: #00bcd4; /* Teal color */
+    border: 1px solid #00bcd4; /* Teal border */
+}
+
+.signup-btn {
+    background-color: #00bcd4; /* Teal color */
+    color: #fff; /* White text */
+}
+
+.leaderboard {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.top-3 {
+    display: flex;
+    justify-content: space-around;
+    background-color: #495057; /* Darker gray background */
+    color: #f8f9fa; /* Light text color */
+    padding: 30px;
+    border-radius: 10px;
+    animation: fadeIn 2s ease-in-out, scaleUp 1s ease;
+}
+
+.profile {
+    text-align: center;
+    margin: 10px;
+    animation: slideIn 1s ease-in-out;
+}
+
+.profile-pic img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    object-fit: cover;
+    animation: bounceIn 1.5s ease;
+}
+
+.score {
+    font-size: 24px;
+    color: #adb5bd; /* Light gray color */
+    font-weight: bold;
+}
+
+.view-profile {
+    color: #00bcd4; /* Teal color */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.first {
+    background-color: #212529; /* Very dark gray background */
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    animation: glow 3s infinite alternate ease-in-out;
+}
+
+.trophy {
+    display: block;
+    font-size: 40px;
+    color: #ffd700; /* Gold color */
+    margin-top: 10px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes bounceIn {
+    0% { transform: scale(0); }
+    60% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+@keyframes glow {
+    0% { box-shadow: 0 0 10px #ffd700; } /* Gold color */
+    100% { box-shadow: 0 0 20px #ffd700; } /* Gold color */
+}
+
+@keyframes slideIn {
+    0% { transform: translateX(-50%); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes scaleUp {
+    0% { transform: scale(0.9); }
+    100% { transform: scale(1); }
+}
+
+
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .top-3 {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .leaderboard-table th, .leaderboard-table td {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header {
+        flex-direction: column;
+    }
+
+    .auth-buttons {
+        margin-top: 10px;
+    }
+
+    .leaderboard-table {
+        width: 95%;
+    }
+}
+
+
+/* Leaderboard Table */
+.leaderboard-table {
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.leaderboard-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.leaderboard-table th, .leaderboard-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.leaderboard-table th {
+    background-color: #f4f4f4;
+}
+
+.leaderboard-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.profile-pic {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.profile-pic img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+.name {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 15px;
+}
+
+.score {
+    font-weight: bold;
+  
+}
+
+/* Responsive Styles */
+/* @media screen and (max-width: 768px) {
+    .top-3 {
+        flex-direction: column;
+    }
+
+    .leaderboard-table th, .leaderboard-table td {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header {
+        flex-direction: column;
+    }
+
+    .auth-buttons {
+        margin-top: 10px;
+    }
+
+    .leaderboard-table {
+        width: 95%;
+    }
+} */
